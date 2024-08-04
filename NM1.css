@@ -1,0 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #c4c7c9;
+    color: #1b0000;
+    line-height: 1.0;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('./road2d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1px;
+}
+
+.input-container {
+    padding: 10px;
+    background-color: #af6dff;
+    border: 10px ridge #bc86fe;
+    display: inline-block;
+    font-size : 20px;
+
+}
+
+.acceleration-container, .velocity-container, .distance-container, .time-container {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffeb3b;
+    border: 2px solid #ffc107;
+    display: inline-block;
+    font-size : 20px;
+}
+
+.distance-container, .time-container {
+    background-color: #b2dfdb;
+    border: 2px solid #009688;
+}
+
+input[type="range"] {
+    width: 280px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+label {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    background-color: #007bff;
+    color: #fff;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: #cccccc;
+    color: #6c757d;
+}
+
+button:not(:disabled):hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+button:not(:disabled):active {
+    background-color: #004494;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+.car {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background-color: #ffcc00;
+    border: 3px solid #333;
+    border-radius: 10px;
+    bottom: 20px;
+    left: 0;
+}
+
+.wheel {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #333;
+    bottom: 5px;
+}
+
+.wheel-left {
+    left: 15px;
+}
+
+.wheel-right {
+    right: 15px;
+}
+
+#customButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    background-color: #36a8ce;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+#customButton:hover {
+    background-color: #5ebbd9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+#customButton:active {
+    background-color: #b0e0e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+}
